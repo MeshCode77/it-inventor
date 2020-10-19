@@ -1,0 +1,59 @@
+d:\Zakazy\BelDiplom\Diplom\576081\itInventor\itInventor\bin\Debug\itInventor.exe.config
+d:\Zakazy\BelDiplom\Diplom\576081\itInventor\itInventor\bin\Debug\itInventor.exe
+d:\Zakazy\BelDiplom\Diplom\576081\itInventor\itInventor\bin\Debug\itInventor.pdb
+d:\Zakazy\BelDiplom\Diplom\576081\itInventor\itInventor\obj\Debug\itInventor.csprojAssemblyReference.cache
+d:\Zakazy\BelDiplom\Diplom\576081\itInventor\itInventor\obj\Debug\itInventor.fDolgn.resources
+d:\Zakazy\BelDiplom\Diplom\576081\itInventor\itInventor\obj\Debug\itInventor.fKind.resources
+d:\Zakazy\BelDiplom\Diplom\576081\itInventor\itInventor\obj\Debug\itInventor.fMainForm.resources
+d:\Zakazy\BelDiplom\Diplom\576081\itInventor\itInventor\obj\Debug\itInventor.fPodr.resources
+d:\Zakazy\BelDiplom\Diplom\576081\itInventor\itInventor\obj\Debug\itInventor.fPost.resources
+d:\Zakazy\BelDiplom\Diplom\576081\itInventor\itInventor\obj\Debug\itInventor.fProd.resources
+d:\Zakazy\BelDiplom\Diplom\576081\itInventor\itInventor\obj\Debug\itInventor.fUsers.resources
+d:\Zakazy\BelDiplom\Diplom\576081\itInventor\itInventor\obj\Debug\itInventor.Properties.Resources.resources
+d:\Zakazy\BelDiplom\Diplom\576081\itInventor\itInventor\obj\Debug\itInventor.csproj.GenerateResource.cache
+d:\Zakazy\BelDiplom\Diplom\576081\itInventor\itInventor\obj\Debug\itInventor.csproj.CoreCompileInputs.cache
+d:\Zakazy\BelDiplom\Diplom\576081\itInventor\itInventor\obj\Debug\itInventor.exe
+d:\Zakazy\BelDiplom\Diplom\576081\itInventor\itInventor\obj\Debug\itInventor.pdb
+D:\Zakazy\BelDiplom\Diplom\576081\itInventor\itInventor\obj\Debug\itInventor.fOborud.resources
+D:\Zakazy\BelDiplom\Diplom\576081\itInventor\itInventor\obj\Debug\itInventor.fOborudAdd.resources
+D:\Zakazy\BelDiplom\Diplom\576081\itInventor\itInventor\obj\Debug\itInventor.fRemont.resources
+e:\БГУиР ИИТ гр.80331\К ДИПЛОМУ\MY ДИПЛОМ\576081\itInventor\itInventor\bin\Debug\itInventor.exe.config
+e:\БГУиР ИИТ гр.80331\К ДИПЛОМУ\MY ДИПЛОМ\576081\itInventor\itInventor\bin\Debug\itInventor.exe
+e:\БГУиР ИИТ гр.80331\К ДИПЛОМУ\MY ДИПЛОМ\576081\itInventor\itInventor\bin\Debug\itInventor.pdb
+e:\БГУиР ИИТ гр.80331\К ДИПЛОМУ\MY ДИПЛОМ\576081\itInventor\itInventor\obj\Debug\itInventor.fDolgn.resources
+e:\БГУиР ИИТ гр.80331\К ДИПЛОМУ\MY ДИПЛОМ\576081\itInventor\itInventor\obj\Debug\itInventor.fKind.resources
+e:\БГУиР ИИТ гр.80331\К ДИПЛОМУ\MY ДИПЛОМ\576081\itInventor\itInventor\obj\Debug\itInventor.fOborud.resources
+e:\БГУиР ИИТ гр.80331\К ДИПЛОМУ\MY ДИПЛОМ\576081\itInventor\itInventor\obj\Debug\itInventor.fOborudAdd.resources
+e:\БГУиР ИИТ гр.80331\К ДИПЛОМУ\MY ДИПЛОМ\576081\itInventor\itInventor\obj\Debug\itInventor.fMainForm.resources
+e:\БГУиР ИИТ гр.80331\К ДИПЛОМУ\MY ДИПЛОМ\576081\itInventor\itInventor\obj\Debug\itInventor.fPodr.resources
+e:\БГУиР ИИТ гр.80331\К ДИПЛОМУ\MY ДИПЛОМ\576081\itInventor\itInventor\obj\Debug\itInventor.fPost.resources
+e:\БГУиР ИИТ гр.80331\К ДИПЛОМУ\MY ДИПЛОМ\576081\itInventor\itInventor\obj\Debug\itInventor.fProd.resources
+e:\БГУиР ИИТ гр.80331\К ДИПЛОМУ\MY ДИПЛОМ\576081\itInventor\itInventor\obj\Debug\itInventor.fRemont.resources
+e:\БГУиР ИИТ гр.80331\К ДИПЛОМУ\MY ДИПЛОМ\576081\itInventor\itInventor\obj\Debug\itInventor.fUsers.resources
+e:\БГУиР ИИТ гр.80331\К ДИПЛОМУ\MY ДИПЛОМ\576081\itInventor\itInventor\obj\Debug\itInventor.Properties.Resources.resources
+e:\БГУиР ИИТ гр.80331\К ДИПЛОМУ\MY ДИПЛОМ\576081\itInventor\itInventor\obj\Debug\itInventor.csproj.GenerateResource.cache
+e:\БГУиР ИИТ гр.80331\К ДИПЛОМУ\MY ДИПЛОМ\576081\itInventor\itInventor\obj\Debug\itInventor.csproj.CoreCompileInputs.cache
+e:\БГУиР ИИТ гр.80331\К ДИПЛОМУ\MY ДИПЛОМ\576081\itInventor\itInventor\obj\Debug\itInventor.exe
+e:\БГУиР ИИТ гр.80331\К ДИПЛОМУ\MY ДИПЛОМ\576081\itInventor\itInventor\obj\Debug\itInventor.pdb
+e:\БГУиР ИИТ гр.80331\К ДИПЛОМУ\MY ДИПЛОМ\576081\itInventor\itInventor\obj\Debug\itInventor.EditUser.resources
+E:\БГУиР ИИТ гр.80331\К ДИПЛОМУ\MY ДИПЛОМ\576081\itInventor\itInventor\obj\Debug\itInventor.csprojAssemblyReference.cache
+f:\Программирование\GitHub\C#\it-inventor\itInventor\bin\Debug\itInventor.exe.config
+f:\Программирование\GitHub\C#\it-inventor\itInventor\bin\Debug\itInventor.exe
+f:\Программирование\GitHub\C#\it-inventor\itInventor\bin\Debug\itInventor.pdb
+f:\Программирование\GitHub\C#\it-inventor\itInventor\obj\Debug\itInventor.csprojAssemblyReference.cache
+f:\Программирование\GitHub\C#\it-inventor\itInventor\obj\Debug\itInventor.EditUser.resources
+f:\Программирование\GitHub\C#\it-inventor\itInventor\obj\Debug\itInventor.fDolgn.resources
+f:\Программирование\GitHub\C#\it-inventor\itInventor\obj\Debug\itInventor.fKind.resources
+f:\Программирование\GitHub\C#\it-inventor\itInventor\obj\Debug\itInventor.fOborud.resources
+f:\Программирование\GitHub\C#\it-inventor\itInventor\obj\Debug\itInventor.fOborudAdd.resources
+f:\Программирование\GitHub\C#\it-inventor\itInventor\obj\Debug\itInventor.fMainForm.resources
+f:\Программирование\GitHub\C#\it-inventor\itInventor\obj\Debug\itInventor.fPodr.resources
+f:\Программирование\GitHub\C#\it-inventor\itInventor\obj\Debug\itInventor.fPost.resources
+f:\Программирование\GitHub\C#\it-inventor\itInventor\obj\Debug\itInventor.fProd.resources
+f:\Программирование\GitHub\C#\it-inventor\itInventor\obj\Debug\itInventor.fRemont.resources
+f:\Программирование\GitHub\C#\it-inventor\itInventor\obj\Debug\itInventor.fUsers.resources
+f:\Программирование\GitHub\C#\it-inventor\itInventor\obj\Debug\itInventor.Properties.Resources.resources
+f:\Программирование\GitHub\C#\it-inventor\itInventor\obj\Debug\itInventor.csproj.GenerateResource.cache
+f:\Программирование\GitHub\C#\it-inventor\itInventor\obj\Debug\itInventor.csproj.CoreCompileInputs.cache
+f:\Программирование\GitHub\C#\it-inventor\itInventor\obj\Debug\itInventor.exe
+f:\Программирование\GitHub\C#\it-inventor\itInventor\obj\Debug\itInventor.pdb

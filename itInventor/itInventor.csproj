@@ -1,0 +1,371 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{A4E9EFB1-FC66-4413-BC24-D4C41B0F1147}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>itInventor</RootNamespace>
+    <AssemblyName>itInventor</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="dolgnDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dolgnDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="EditUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditUser.Designer.cs">
+      <DependentUpon>EditUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fDolgn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fDolgn.Designer.cs">
+      <DependentUpon>fDolgn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fKind.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fKind.Designer.cs">
+      <DependentUpon>fKind.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fOborud.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fOborud.Designer.cs">
+      <DependentUpon>fOborud.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fOborudAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fOborudAdd.Designer.cs">
+      <DependentUpon>fOborudAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fPodr.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fPodr.Designer.cs">
+      <DependentUpon>fPodr.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fPost.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fPost.Designer.cs">
+      <DependentUpon>fPost.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fProd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fProd.Designer.cs">
+      <DependentUpon>fProd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fRemont.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fRemont.Designer.cs">
+      <DependentUpon>fRemont.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fUsers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fUsers.Designer.cs">
+      <DependentUpon>fUsers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="kindDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>kindDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="listUserDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>listUserDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="objArchDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>objArchDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="objOnRemontDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>objOnRemontDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="podrDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>podrDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="postDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>postDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="prodDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>prodDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="selOborudDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>selOborudDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="SortPoPodrDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SortPoPodrDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="usersDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>usersDataSet.xsd</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="EditUser.resx">
+      <DependentUpon>EditUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fDolgn.resx">
+      <DependentUpon>fDolgn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fKind.resx">
+      <DependentUpon>fKind.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fOborud.resx">
+      <DependentUpon>fOborud.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fOborudAdd.resx">
+      <DependentUpon>fOborudAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fPodr.resx">
+      <DependentUpon>fPodr.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fPost.resx">
+      <DependentUpon>fPost.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fProd.resx">
+      <DependentUpon>fProd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fRemont.resx">
+      <DependentUpon>fRemont.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fUsers.resx">
+      <DependentUpon>fUsers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="dolgnDataSet.xsc">
+      <DependentUpon>dolgnDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="dolgnDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dolgnDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="dolgnDataSet.xss">
+      <DependentUpon>dolgnDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="kindDataSet.xsc">
+      <DependentUpon>kindDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="kindDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>kindDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="kindDataSet.xss">
+      <DependentUpon>kindDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="listUserDataSet.xsc">
+      <DependentUpon>listUserDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="listUserDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>listUserDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="listUserDataSet.xss">
+      <DependentUpon>listUserDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="objArchDataSet.xsc">
+      <DependentUpon>objArchDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="objArchDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>objArchDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="objArchDataSet.xss">
+      <DependentUpon>objArchDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="objOnRemontDataSet.xsc">
+      <DependentUpon>objOnRemontDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="objOnRemontDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>objOnRemontDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="objOnRemontDataSet.xss">
+      <DependentUpon>objOnRemontDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="podrDataSet.xsc">
+      <DependentUpon>podrDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="podrDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>podrDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="podrDataSet.xss">
+      <DependentUpon>podrDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="postDataSet.xsc">
+      <DependentUpon>postDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="postDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>postDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="postDataSet.xss">
+      <DependentUpon>postDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="prodDataSet.xsc">
+      <DependentUpon>prodDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="prodDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>prodDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="prodDataSet.xss">
+      <DependentUpon>prodDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="selOborudDataSet.xsc">
+      <DependentUpon>selOborudDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="selOborudDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>selOborudDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="selOborudDataSet.xss">
+      <DependentUpon>selOborudDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="SortPoPodrDataSet.xsc">
+      <DependentUpon>SortPoPodrDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="SortPoPodrDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SortPoPodrDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="SortPoPodrDataSet.xss">
+      <DependentUpon>SortPoPodrDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="usersDataSet.xsc">
+      <DependentUpon>usersDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="usersDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>usersDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="usersDataSet.xss">
+      <DependentUpon>usersDataSet.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Save2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\plus.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delete.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mOptions.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bApply.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bCancel2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\edit_user40px.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
