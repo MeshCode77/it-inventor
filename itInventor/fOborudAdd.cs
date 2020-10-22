@@ -22,7 +22,9 @@ namespace itInventor
         }
 
         private void fOborudAdd_Load(object sender, EventArgs e)
-        {           
+        {
+            // TODO: данная строка кода позволяет загрузить данные в таблицу "usersDataSet.users". При необходимости она может быть перемещена или удалена.
+            //this.usersTableAdapter.Fill(this.usersDataSet.users, kod);
             // TODO: данная строка кода позволяет загрузить данные в таблицу "postDataSet.post". При необходимости она может быть перемещена или удалена.
             this.postTableAdapter.Fill(this.postDataSet.post);
             // TODO: данная строка кода позволяет загрузить данные в таблицу "prodDataSet.producer". При необходимости она может быть перемещена или удалена.
@@ -55,12 +57,14 @@ namespace itInventor
             cmd.Parameters.AddWithValue("@id_us", cbUser.SelectedValue);
             cmd.Parameters.AddWithValue("@id_kn", cbKind.SelectedValue);
             cmd.Parameters.AddWithValue("@id_ps", cbPost.SelectedValue);
-            cmd.Parameters.AddWithValue("@id_pr", cbProd.SelectedValue);
-
+            cmd.Parameters.AddWithValue("@id_pr", cbProd.SelectedValue);         
+            
             cmd.Connection.Open();
             cmd.ExecuteNonQuery();
             cmd.Connection.Close();
 
         }
+
+        
     }
 }

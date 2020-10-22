@@ -40,7 +40,6 @@ E:\БГУиР ИИТ гр.80331\К ДИПЛОМУ\MY ДИПЛОМ\576081\itInven
 f:\Программирование\GitHub\C#\it-inventor\itInventor\bin\Debug\itInventor.exe.config
 f:\Программирование\GitHub\C#\it-inventor\itInventor\bin\Debug\itInventor.exe
 f:\Программирование\GitHub\C#\it-inventor\itInventor\bin\Debug\itInventor.pdb
-f:\Программирование\GitHub\C#\it-inventor\itInventor\obj\Debug\itInventor.csprojAssemblyReference.cache
 f:\Программирование\GitHub\C#\it-inventor\itInventor\obj\Debug\itInventor.EditUser.resources
 f:\Программирование\GitHub\C#\it-inventor\itInventor\obj\Debug\itInventor.fDolgn.resources
 f:\Программирование\GitHub\C#\it-inventor\itInventor\obj\Debug\itInventor.fKind.resources

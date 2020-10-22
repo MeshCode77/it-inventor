@@ -31,6 +31,8 @@
             this.components = new System.ComponentModel.Container();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.cbUser = new System.Windows.Forms.ComboBox();
+            this.usersBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.sortPoPodrDataSet = new itInventor.SortPoPodrDataSet();
             this.txSNo = new System.Windows.Forms.TextBox();
             this.txParam = new System.Windows.Forms.TextBox();
             this.nuCost = new System.Windows.Forms.NumericUpDown();
@@ -61,10 +63,12 @@
             this.kindTableAdapter = new itInventor.kindDataSetTableAdapters.kindTableAdapter();
             this.producerTableAdapter = new itInventor.prodDataSetTableAdapters.producerTableAdapter();
             this.postTableAdapter = new itInventor.postDataSetTableAdapters.postTableAdapter();
-            this.sortPoPodrDataSet = new itInventor.SortPoPodrDataSet();
-            this.usersBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.usersBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.tableAdapterManager = new itInventor.SortPoPodrDataSetTableAdapters.TableAdapterManager();
             this.usersTableAdapter = new itInventor.SortPoPodrDataSetTableAdapters.usersTableAdapter();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sortPoPodrDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nuCost)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.postBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.postDataSet)).BeginInit();
@@ -72,8 +76,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.prodDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.kindBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.kindDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sortPoPodrDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -114,6 +117,16 @@
             this.cbUser.Size = new System.Drawing.Size(195, 21);
             this.cbUser.TabIndex = 19;
             this.cbUser.ValueMember = "id_us";
+            // 
+            // usersBindingSource
+            // 
+            this.usersBindingSource.DataMember = "users";
+            this.usersBindingSource.DataSource = this.sortPoPodrDataSet;
+            // 
+            // sortPoPodrDataSet
+            // 
+            this.sortPoPodrDataSet.DataSetName = "SortPoPodrDataSet";
+            this.sortPoPodrDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // txSNo
             // 
@@ -363,15 +376,11 @@
             // 
             this.postTableAdapter.ClearBeforeFill = true;
             // 
-            // sortPoPodrDataSet
+            // tableAdapterManager
             // 
-            this.sortPoPodrDataSet.DataSetName = "SortPoPodrDataSet";
-            this.sortPoPodrDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // usersBindingSource
-            // 
-            this.usersBindingSource.DataMember = "users";
-            this.usersBindingSource.DataSource = this.sortPoPodrDataSet;
+            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
+            this.tableAdapterManager.Connection = null;
+            this.tableAdapterManager.UpdateOrder = itInventor.SortPoPodrDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             // 
             // usersTableAdapter
             // 
@@ -392,6 +401,8 @@
             this.Load += new System.EventHandler(this.fOborudAdd_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sortPoPodrDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nuCost)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.postBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.postDataSet)).EndInit();
@@ -399,8 +410,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.prodDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.kindBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.kindDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sortPoPodrDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -439,6 +449,8 @@
         private postDataSet postDataSet;
         private System.Windows.Forms.BindingSource postBindingSource;
         private postDataSetTableAdapters.postTableAdapter postTableAdapter;
+        private System.Windows.Forms.BindingSource usersBindingSource1;
+        private SortPoPodrDataSetTableAdapters.TableAdapterManager tableAdapterManager;
         private System.Windows.Forms.BindingSource usersBindingSource;
         private SortPoPodrDataSet sortPoPodrDataSet;
         private SortPoPodrDataSetTableAdapters.usersTableAdapter usersTableAdapter;

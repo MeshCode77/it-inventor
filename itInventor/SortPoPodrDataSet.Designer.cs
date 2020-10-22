@@ -281,6 +281,8 @@ namespace itInventor {
             
             private global::System.Data.DataColumn columnusFio;
             
+            private global::System.Data.DataColumn columnid_us;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public usersDataTable() {
@@ -324,6 +326,14 @@ namespace itInventor {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn id_usColumn {
+                get {
+                    return this.columnid_us;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -362,10 +372,18 @@ namespace itInventor {
             public usersRow AddusersRow(string usFio) {
                 usersRow rowusersRow = ((usersRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
-                        usFio};
+                        usFio,
+                        null};
                 rowusersRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowusersRow);
                 return rowusersRow;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public usersRow FindByid_us(int id_us) {
+                return ((usersRow)(this.Rows.Find(new object[] {
+                            id_us})));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -386,6 +404,7 @@ namespace itInventor {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             internal void InitVars() {
                 this.columnusFio = base.Columns["usFio"];
+                this.columnid_us = base.Columns["id_us"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -393,7 +412,17 @@ namespace itInventor {
             private void InitClass() {
                 this.columnusFio = new global::System.Data.DataColumn("usFio", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnusFio);
+                this.columnid_us = new global::System.Data.DataColumn("id_us", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnid_us);
+                this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
+                                this.columnid_us}, true));
                 this.columnusFio.MaxLength = 30;
+                this.columnid_us.AutoIncrement = true;
+                this.columnid_us.AutoIncrementSeed = -1;
+                this.columnid_us.AutoIncrementStep = -1;
+                this.columnid_us.AllowDBNull = false;
+                this.columnid_us.ReadOnly = true;
+                this.columnid_us.Unique = true;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -547,6 +576,17 @@ namespace itInventor {
                 }
                 set {
                     this[this.tableusers.usFioColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public int id_us {
+                get {
+                    return ((int)(this[this.tableusers.id_usColumn]));
+                }
+                set {
+                    this[this.tableusers.id_usColumn] = value;
                 }
             }
             
@@ -723,6 +763,7 @@ namespace itInventor.SortPoPodrDataSetTableAdapters {
             tableMapping.SourceTable = "Table";
             tableMapping.DataSetTable = "users";
             tableMapping.ColumnMappings.Add("usFio", "usFio");
+            tableMapping.ColumnMappings.Add("id_us", "id_us");
             this._adapter.TableMappings.Add(tableMapping);
         }
         
@@ -739,9 +780,9 @@ namespace itInventor.SortPoPodrDataSetTableAdapters {
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[2];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT        (RTRIM(usFio)+\' \'+LEFT(usName, 1)+\'. \'+LEFT(usOtch, 1)+\'.\') AS usFi" +
-                "o\r\nFROM            users INNER JOIN\r\n                         podr ON users.id_p" +
-                "d = podr.id_pd\r\nWHERE        (users.id_pd = @kod)";
+            this._commandCollection[0].CommandText = "SELECT        id_us, (RTRIM(usFio)+\' \'+LEFT(usName, 1)+\'. \'+LEFT(usOtch, 1)+\'.\') " +
+                "AS usFio\r\nFROM            users INNER JOIN\r\n                         podr ON use" +
+                "rs.id_pd = podr.id_pd\r\nWHERE        (users.id_pd = @kod)";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@kod", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "id_pd", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[1] = new global::System.Data.SqlClient.SqlCommand();
