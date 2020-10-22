@@ -60,46 +60,44 @@ namespace itInventor
 
         private void button1_Click(object sender, EventArgs e)
         {
-            usersTableAdapter.UpdateQuery(txParam.Text, nuCost.Value, dtEnter.Value.Date.ToString(),
-                                          dtEnter.Value.Date.ToString(), txModel.Text, txSNo.Text, 
-                                          (int)cbUser.SelectedValue,  (int)cbPost.SelectedValue, 
-                                          (int)cbProd.SelectedValue, false, false, false, indPass);
-               
 
-            //try
-            //{
-            //    SqlCommand cmd = new SqlCommand
-            //    {
-            //        Connection = new SqlConnection(Properties.Settings.Default.itInventorConnectionString),
-            //        CommandText = "updateOborud",
-            //        CommandType = CommandType.StoredProcedure
-            //    };
+            //objectsTableAdapter.Update(objectsDataSet);  
 
-            //    cmd.Parameters.AddWithValue("@indPass", indPass);
-            //    cmd.Parameters.AddWithValue("@objNote", txParam.Text); // параметры
-            //    //cmd.Parameters.AddWithValue("@cost", nuCost.Value);
-            //    //cmd.Parameters.AddWithValue("@objDate", dtEnter.Value.Date);
-            //    //cmd.Parameters.AddWithValue("@garantDate", dtGarant.Value.Date);
-            //    cmd.Parameters.AddWithValue("@model", txModel.Text);
-            //    cmd.Parameters.AddWithValue("@sNo", txSNo.Text);
-            //    //cmd.Parameters.AddWithValue("@id_us", cbUser.SelectedValue);
-            //    //cmd.Parameters.AddWithValue("@id_kn", cbKind.SelectedValue);
-            //    //cmd.Parameters.AddWithValue("@id_ps", cbPost.SelectedValue);
-            //    //cmd.Parameters.AddWithValue("@id_pr", cbProd.SelectedValue);
+            try
+            {
+                SqlCommand cmd = new SqlCommand
+                {
+                    Connection = new SqlConnection(Properties.Settings.Default.itInventorConnectionString),
+                    CommandText = "updateOborud",
+                    CommandType = CommandType.StoredProcedure
+                };
 
-            //    cmd.Connection.Open();
-            //    cmd.ExecuteNonQuery();
-            //    cmd.Connection.Close();
+                cmd.Parameters.AddWithValue("@indPass", indPass);
 
-                
-            //    MessageBox.Show("Успешно обновлено");
+                cmd.Parameters.AddWithValue("@objNote", txParam.Text); // параметры
+                cmd.Parameters.AddWithValue("@cost", nuCost.Value);
+                cmd.Parameters.AddWithValue("@objDate", dtEnter.Value.Date);
+                cmd.Parameters.AddWithValue("@garantDate", dtGarant.Value.Date);
+                cmd.Parameters.AddWithValue("@model", txModel.Text);
+                cmd.Parameters.AddWithValue("@sNo", txSNo.Text);
+                cmd.Parameters.AddWithValue("@id_us", cbUser.SelectedValue);
+                cmd.Parameters.AddWithValue("@id_kn", cbKind.SelectedValue);
+                cmd.Parameters.AddWithValue("@id_ps", cbPost.SelectedValue);
+                cmd.Parameters.AddWithValue("@id_pr", cbProd.SelectedValue);
 
-            //}
-            //catch (Exception ex)
-            //{
-            //    MessageBox.Show(ex.Message);
-            //}
-            
+                cmd.Connection.Open();
+                cmd.ExecuteNonQuery();
+                cmd.Connection.Close();
+
+
+                  MessageBox.Show("Успешно обновлено");
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+
         }
     }
 }

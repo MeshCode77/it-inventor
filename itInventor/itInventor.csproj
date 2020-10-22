@@ -132,6 +132,14 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>objArchDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="objectsDataSet.cs">
+      <DependentUpon>objectsDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="objectsDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>objectsDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="objOnRemontDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -255,6 +263,17 @@
     </None>
     <None Include="objArchDataSet.xss">
       <DependentUpon>objArchDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="objectsDataSet.xsc">
+      <DependentUpon>objectsDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="objectsDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>objectsDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="objectsDataSet.xss">
+      <DependentUpon>objectsDataSet.xsd</DependentUpon>
     </None>
     <None Include="objOnRemontDataSet.xsc">
       <DependentUpon>objOnRemontDataSet.xsd</DependentUpon>

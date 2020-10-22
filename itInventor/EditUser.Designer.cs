@@ -30,6 +30,8 @@
         {
             this.components = new System.ComponentModel.Container();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.textBox2 = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
@@ -68,8 +70,8 @@
             this.postTableAdapter = new itInventor.postDataSetTableAdapters.postTableAdapter();
             this.usersTableAdapter = new itInventor.SortPoPodrDataSetTableAdapters.usersTableAdapter();
             this.button2 = new System.Windows.Forms.Button();
-            this.label12 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.objectsTableAdapter = new itInventor.objectsDataSetTableAdapters.objectsTableAdapter();
+            this.objectsDataSet = new itInventor.objectsDataSet();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sortPoPodrDataSet)).BeginInit();
@@ -82,6 +84,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.kindDataSetBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.kindDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.postBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.objectsDataSet)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -116,6 +119,22 @@
             this.groupBox1.Size = new System.Drawing.Size(584, 281);
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(317, 59);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(42, 13);
+            this.label12.TabIndex = 23;
+            this.label12.Text = "id_podr";
+            // 
+            // textBox2
+            // 
+            this.textBox2.Location = new System.Drawing.Point(365, 52);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(64, 20);
+            this.textBox2.TabIndex = 22;
             // 
             // label11
             // 
@@ -415,21 +434,14 @@
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
-            // label12
+            // objectsTableAdapter
             // 
-            this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(317, 59);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(42, 13);
-            this.label12.TabIndex = 23;
-            this.label12.Text = "id_podr";
+            this.objectsTableAdapter.ClearBeforeFill = true;
             // 
-            // textBox2
+            // objectsDataSet
             // 
-            this.textBox2.Location = new System.Drawing.Point(365, 52);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(64, 20);
-            this.textBox2.TabIndex = 22;
+            this.objectsDataSet.DataSetName = "objectsDataSet";
+            this.objectsDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // EditUser
             // 
@@ -454,6 +466,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.kindDataSetBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.kindDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.postBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.objectsDataSet)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -501,5 +514,7 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.TextBox textBox2;
+        private objectsDataSetTableAdapters.objectsTableAdapter objectsTableAdapter;
+        private objectsDataSet objectsDataSet;
     }
 }

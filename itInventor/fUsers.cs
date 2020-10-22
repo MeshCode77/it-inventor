@@ -31,6 +31,7 @@ namespace itInventor
         private void toolStripButton1_Click(object sender, EventArgs e)
         {
             usersTableAdapter.Update(usersDataSet);
+            
         }
 
         private void bFilter_Click(object sender, EventArgs e)

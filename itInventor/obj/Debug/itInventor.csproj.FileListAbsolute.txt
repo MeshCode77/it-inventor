@@ -56,3 +56,4 @@ f:\Программирование\GitHub\C#\it-inventor\itInventor\obj\Debug\i
 f:\Программирование\GitHub\C#\it-inventor\itInventor\obj\Debug\itInventor.csproj.CoreCompileInputs.cache
 f:\Программирование\GitHub\C#\it-inventor\itInventor\obj\Debug\itInventor.exe
 f:\Программирование\GitHub\C#\it-inventor\itInventor\obj\Debug\itInventor.pdb
+F:\Программирование\GitHub\C#\it-inventor\itInventor\obj\Debug\itInventor.csprojAssemblyReference.cache
