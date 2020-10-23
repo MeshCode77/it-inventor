@@ -363,6 +363,7 @@
             this.button2.TabIndex = 2;
             this.button2.Text = "Отмена";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // kindTableAdapter
             // 
@@ -397,6 +398,7 @@
             this.Controls.Add(this.button1);
             this.Controls.Add(this.groupBox1);
             this.Name = "fOborudAdd";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Новый объект";
             this.Load += new System.EventHandler(this.fOborudAdd_Load);
             this.groupBox1.ResumeLayout(false);

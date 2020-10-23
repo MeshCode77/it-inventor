@@ -89,6 +89,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.button2);
             this.groupBox1.Controls.Add(this.label12);
             this.groupBox1.Controls.Add(this.textBox2);
             this.groupBox1.Controls.Add(this.label11);
@@ -147,7 +148,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(489, 253);
+            this.button1.Location = new System.Drawing.Point(496, 217);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(82, 23);
             this.button1.TabIndex = 2;
@@ -426,7 +427,7 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(602, 265);
+            this.button2.Location = new System.Drawing.Point(496, 252);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(82, 23);
             this.button2.TabIndex = 3;
@@ -447,10 +448,10 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(689, 305);
-            this.Controls.Add(this.button2);
+            this.ClientSize = new System.Drawing.Size(608, 305);
             this.Controls.Add(this.groupBox1);
             this.Name = "EditUser";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "EditUser";
             this.Load += new System.EventHandler(this.EditUser_Load);
             this.groupBox1.ResumeLayout(false);

@@ -25,6 +25,9 @@ namespace itInventor
         public fOborud()
         {
             InitializeComponent();
+
+            grData.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            grData.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
         }
 
         private void fOborud_Load(object sender, EventArgs e)
@@ -175,7 +178,7 @@ namespace itInventor
                     CommandText = "delOborud"
                 };
 
-                cmd.Parameters.AddWithValue("@obNo", (int)grData.CurrentRow.Cells["objNo"].Value);
+                cmd.Parameters.AddWithValue("@objNo", (int)grData.CurrentRow.Cells["objNo"].Value);
 
                 cmd.Connection.Open();
                 cmd.ExecuteNonQuery();
