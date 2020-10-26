@@ -12,6 +12,7 @@ namespace itInventor
 {
     public partial class fMainForm : Form
     {
+
         public fMainForm()
         {
             InitializeComponent();
@@ -77,7 +78,7 @@ namespace itInventor
         }
 
         private void mOborud_Click(object sender, EventArgs e)
-        {
+        {           
             fOborud frm = new fOborud();
 
             frm.Text = mOborud.Text;

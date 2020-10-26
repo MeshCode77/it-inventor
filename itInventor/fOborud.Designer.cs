@@ -29,11 +29,13 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(fOborud));
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.trPodr = new System.Windows.Forms.TreeView();
+            this.label1 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.grData = new System.Windows.Forms.DataGridView();
             this.objNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.prNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -71,6 +73,10 @@
             this.toolStripButton4 = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton3 = new System.Windows.Forms.ToolStripButton();
             this.selOborudTableAdapter = new itInventor.selOborudDataSetTableAdapters.selOborudTableAdapter();
+            this.objectsDataSet = new itInventor.objectsDataSet();
+            this.objectsTableAdapter = new itInventor.objectsDataSetTableAdapters.objectsTableAdapter();
+            this.label2 = new System.Windows.Forms.Label();
+            this.textBox2 = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -80,6 +86,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.selOborudDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).BeginInit();
             this.bindingNavigator1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.objectsDataSet)).BeginInit();
             this.SuspendLayout();
             // 
             // statusStrip1
@@ -102,6 +109,10 @@
             // 
             // splitContainer1.Panel2
             // 
+            this.splitContainer1.Panel2.Controls.Add(this.label2);
+            this.splitContainer1.Panel2.Controls.Add(this.textBox2);
+            this.splitContainer1.Panel2.Controls.Add(this.label1);
+            this.splitContainer1.Panel2.Controls.Add(this.textBox1);
             this.splitContainer1.Panel2.Controls.Add(this.grData);
             this.splitContainer1.Panel2.Controls.Add(this.bindingNavigator1);
             this.splitContainer1.Size = new System.Drawing.Size(839, 426);
@@ -118,7 +129,22 @@
             this.trPodr.Size = new System.Drawing.Size(232, 411);
             this.trPodr.TabIndex = 0;
             this.trPodr.NodeMouseClick += new System.Windows.Forms.TreeNodeMouseClickEventHandler(this.trPodr_NodeMouseClick);
-            this.trPodr.Click += new System.EventHandler(this.trPodr_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(35, 329);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(66, 13);
+            this.label1.TabIndex = 3;
+            this.label1.Text = "Select Index";
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(108, 323);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(100, 20);
+            this.textBox1.TabIndex = 2;
             // 
             // grData
             // 
@@ -153,9 +179,10 @@
             this.grData.Location = new System.Drawing.Point(3, 28);
             this.grData.Name = "grData";
             this.grData.ReadOnly = true;
-            this.grData.Size = new System.Drawing.Size(573, 395);
+            this.grData.Size = new System.Drawing.Size(573, 270);
             this.grData.TabIndex = 1;
             this.grData.CellEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.grData_CellEnter);
+            this.grData.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.grData_CellValueChanged);
             this.grData.RowPrePaint += new System.Windows.Forms.DataGridViewRowPrePaintEventHandler(this.dataGridView1_RowPrePaint);
             // 
             // objNo
@@ -182,9 +209,9 @@
             // costDataGridViewTextBoxColumn
             // 
             this.costDataGridViewTextBoxColumn.DataPropertyName = "cost";
-            dataGridViewCellStyle3.Format = "N2";
-            dataGridViewCellStyle3.NullValue = null;
-            this.costDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle1.Format = "N2";
+            dataGridViewCellStyle1.NullValue = null;
+            this.costDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle1;
             this.costDataGridViewTextBoxColumn.HeaderText = "Стоимость";
             this.costDataGridViewTextBoxColumn.Name = "costDataGridViewTextBoxColumn";
             this.costDataGridViewTextBoxColumn.ReadOnly = true;
@@ -452,6 +479,31 @@
             // 
             this.selOborudTableAdapter.ClearBeforeFill = true;
             // 
+            // objectsDataSet
+            // 
+            this.objectsDataSet.DataSetName = "objectsDataSet";
+            this.objectsDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // objectsTableAdapter
+            // 
+            this.objectsTableAdapter.ClearBeforeFill = true;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(17, 380);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(84, 13);
+            this.label2.TabIndex = 5;
+            this.label2.Text = "Value Column[0]";
+            // 
+            // textBox2
+            // 
+            this.textBox2.Location = new System.Drawing.Point(108, 373);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(100, 20);
+            this.textBox2.TabIndex = 4;
+            // 
             // fOborud
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -473,6 +525,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).EndInit();
             this.bindingNavigator1.ResumeLayout(false);
             this.bindingNavigator1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.objectsDataSet)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -483,7 +536,6 @@
         private System.Windows.Forms.StatusStrip statusStrip1;
         private System.Windows.Forms.SplitContainer splitContainer1;
         private System.Windows.Forms.TreeView trPodr;
-        private System.Windows.Forms.DataGridView grData;
         private System.Windows.Forms.BindingNavigator bindingNavigator1;
         private System.Windows.Forms.ToolStripLabel bindingNavigatorCountItem;
         private System.Windows.Forms.ToolStripButton bindingNavigatorMoveFirstItem;
@@ -520,5 +572,12 @@
         private System.Windows.Forms.DataGridViewCheckBoxColumn objDism;
         private System.Windows.Forms.DataGridViewCheckBoxColumn onRemont;
         private System.Windows.Forms.ToolStripButton toolStripButton4;
+        public System.Windows.Forms.DataGridView grData;
+        private objectsDataSet objectsDataSet;
+        private objectsDataSetTableAdapters.objectsTableAdapter objectsTableAdapter;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox textBox2;
     }
 }

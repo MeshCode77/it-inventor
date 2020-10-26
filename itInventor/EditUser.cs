@@ -1,4 +1,5 @@
-﻿using System;
+﻿using itInventor.selOborudDataSetTableAdapters;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -19,9 +20,11 @@ namespace itInventor
         string model;
         string parameters;
         string serNum;
+        //int ind;  
+        
 
 
-        public EditUser(int indPass, int kod, string model, string parameters, string serNum)
+        public EditUser(DataSet selOb, int indPass, int kod, string model, string parameters, string serNum)
         {
             this.indPass = indPass; //
             //this.knName = knName; // вид устройства 
@@ -29,6 +32,9 @@ namespace itInventor
             this.model = model;     // значение поля Модель
             this.parameters = parameters;
             this.serNum = serNum;
+            //this.ind = ind;
+
+            //DataSet selOborudDataSet = selOb;
 
             InitializeComponent();
         }
@@ -60,7 +66,7 @@ namespace itInventor
 
         private void button1_Click(object sender, EventArgs e)
         {
-
+            fOborud fOb = new fOborud();
             //objectsTableAdapter.Update(objectsDataSet);  
 
             try
@@ -86,18 +92,44 @@ namespace itInventor
                 cmd.Parameters.AddWithValue("@id_pr", cbProd.SelectedValue);
 
                 cmd.Connection.Open();
-                cmd.ExecuteNonQuery();
+                cmd.ExecuteNonQuery();                
                 cmd.Connection.Close();
 
+                //objectsTableAdapter.Fill(objectsDataSet.objects);
+                
 
-                  MessageBox.Show("Успешно обновлено");
+                //fOb.grData.DataSource = selOborudBindingSource;
+                //SelObjects();
+                //fOb.fOborud_Load(sender, e);
+                //selOborudTableAdapter.Fill(selOborudDataSet.selOborud, kod);
+
+                MessageBox.Show("Успешно обновлено");
+
+                
 
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
-
+            Close();
         }
+
+        public void SelObjects()
+        {
+            SqlCommand cmd = new SqlCommand
+            {
+                Connection = new SqlConnection(Properties.Settings.Default.itInventorConnectionString),
+                CommandText = "selOborud",
+                CommandType = CommandType.StoredProcedure
+            };
+
+            cmd.Parameters.AddWithValue("@kod", kod);
+
+            cmd.Connection.Open();
+            cmd.ExecuteNonQuery();
+            cmd.Connection.Close();
+        }
+
     }
 }

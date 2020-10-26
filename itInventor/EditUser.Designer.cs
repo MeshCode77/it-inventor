@@ -30,10 +30,11 @@
         {
             this.components = new System.ComponentModel.Container();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.button2 = new System.Windows.Forms.Button();
             this.label12 = new System.Windows.Forms.Label();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.OK = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.cbUser = new System.Windows.Forms.ComboBox();
             this.usersBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -69,9 +70,11 @@
             this.postBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.postTableAdapter = new itInventor.postDataSetTableAdapters.postTableAdapter();
             this.usersTableAdapter = new itInventor.SortPoPodrDataSetTableAdapters.usersTableAdapter();
-            this.button2 = new System.Windows.Forms.Button();
             this.objectsTableAdapter = new itInventor.objectsDataSetTableAdapters.objectsTableAdapter();
             this.objectsDataSet = new itInventor.objectsDataSet();
+            this.selOborudDataSet = new itInventor.selOborudDataSet();
+            this.selOborudTableAdapter = new itInventor.selOborudDataSetTableAdapters.selOborudTableAdapter();
+            this.selOborudBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sortPoPodrDataSet)).BeginInit();
@@ -85,6 +88,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.kindDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.postBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.objectsDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.selOborudDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.selOborudBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -93,7 +98,7 @@
             this.groupBox1.Controls.Add(this.label12);
             this.groupBox1.Controls.Add(this.textBox2);
             this.groupBox1.Controls.Add(this.label11);
-            this.groupBox1.Controls.Add(this.button1);
+            this.groupBox1.Controls.Add(this.OK);
             this.groupBox1.Controls.Add(this.textBox1);
             this.groupBox1.Controls.Add(this.cbUser);
             this.groupBox1.Controls.Add(this.txSNo);
@@ -121,6 +126,17 @@
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             // 
+            // button2
+            // 
+            this.button2.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.button2.Location = new System.Drawing.Point(496, 252);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(82, 23);
+            this.button2.TabIndex = 3;
+            this.button2.Text = "Отмена";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
             // label12
             // 
             this.label12.AutoSize = true;
@@ -146,15 +162,15 @@
             this.label11.TabIndex = 21;
             this.label11.Text = "id";
             // 
-            // button1
+            // OK
             // 
-            this.button1.Location = new System.Drawing.Point(496, 217);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(82, 23);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "Обновить";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.OK.Location = new System.Drawing.Point(496, 217);
+            this.OK.Name = "OK";
+            this.OK.Size = new System.Drawing.Size(82, 23);
+            this.OK.TabIndex = 2;
+            this.OK.Text = "OK";
+            this.OK.UseVisualStyleBackColor = true;
+            this.OK.Click += new System.EventHandler(this.button1_Click);
             // 
             // textBox1
             // 
@@ -425,16 +441,6 @@
             // 
             this.usersTableAdapter.ClearBeforeFill = true;
             // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(496, 252);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(82, 23);
-            this.button2.TabIndex = 3;
-            this.button2.Text = "Отмена";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
-            // 
             // objectsTableAdapter
             // 
             this.objectsTableAdapter.ClearBeforeFill = true;
@@ -443,6 +449,20 @@
             // 
             this.objectsDataSet.DataSetName = "objectsDataSet";
             this.objectsDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // selOborudDataSet
+            // 
+            this.selOborudDataSet.DataSetName = "selOborudDataSet";
+            this.selOborudDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // selOborudTableAdapter
+            // 
+            this.selOborudTableAdapter.ClearBeforeFill = true;
+            // 
+            // selOborudBindingSource
+            // 
+            this.selOborudBindingSource.DataMember = "selOborud";
+            this.selOborudBindingSource.DataSource = this.selOborudDataSet;
             // 
             // EditUser
             // 
@@ -468,6 +488,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.kindDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.postBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.objectsDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.selOborudDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.selOborudBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -511,11 +533,14 @@
         private System.Windows.Forms.BindingSource usersBindingSource;
         private SortPoPodrDataSet sortPoPodrDataSet;
         private SortPoPodrDataSetTableAdapters.usersTableAdapter usersTableAdapter;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button OK;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.TextBox textBox2;
         private objectsDataSetTableAdapters.objectsTableAdapter objectsTableAdapter;
         private objectsDataSet objectsDataSet;
+        private selOborudDataSet selOborudDataSet;
+        private selOborudDataSetTableAdapters.selOborudTableAdapter selOborudTableAdapter;
+        private System.Windows.Forms.BindingSource selOborudBindingSource;
     }
 }

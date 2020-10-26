@@ -19,6 +19,9 @@ namespace itInventor
         string model;    // модель
         string parameters;
         string serNum;
+        int ind;
+        int tempind;
+        
 
 
 
@@ -28,6 +31,8 @@ namespace itInventor
 
             grData.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             grData.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            
+        
         }
 
         private void fOborud_Load(object sender, EventArgs e)
@@ -55,15 +60,50 @@ namespace itInventor
                 }
             }
 
-            selPodr.Connection.Close();
-
+            selPodr.Connection.Close();          
         }
 
         private void trPodr_NodeMouseClick(object sender, TreeNodeMouseClickEventArgs e)
         {
-            kod = (int)e.Node.Tag;
+            kod = (int)e.Node.Tag; // выбираем код подразделения
 
+            selOborudTableAdapter.Fill(selOborudDataSet.selOborud, kod); // заполняем таблицу данными согласно выбранного кода подразделения
+        }
+
+        private void toolStripButton4_Click(object sender, EventArgs e)
+        {
+            int temp = ind;
+            EditUser eUser = new EditUser(selOborudDataSet, indPass, kod, model, parameters, serNum);
+            eUser.ShowDialog();
+           
             selOborudTableAdapter.Fill(selOborudDataSet.selOborud, kod);
+                                             
+            grData.CurrentCell = grData[columnIndex: 0, rowIndex: temp]; // установить курсор на редактируемую строку
+        }
+
+        private void grData_CellEnter(object sender, DataGridViewCellEventArgs e)
+        {
+            ind = (int)grData.CurrentRow.Index;  // получить индекс выбранной строки
+            // передаем только значения текстовых полей
+            indPass = (int)grData.CurrentRow.Cells[0].Value;      // получить значение 0 ячейки строки
+            //knName = grData.CurrentRow.Cells[1].Value.ToString(); // получить значение 1 ячейки строки
+            model = grData.CurrentRow.Cells[2].Value.ToString();
+            parameters = grData.CurrentRow.Cells[7].Value.ToString();
+            serNum = grData.CurrentRow.Cells[6].Value.ToString();         
+
+            if(grData.CurrentRow.Index !=0)
+            {
+                ind = (int)grData.CurrentRow.Index;  // получить индекс выбранной строки                
+                grData.CurrentCell = grData[0, ind]; // установить курсор на редактируемую строку                     
+            }
+
+            if(grData.CurrentRow.Index == 0)
+            {
+                grData.CurrentCell = grData[0, 0];
+            }
+
+            textBox1.Text = ind.ToString();
+            textBox2.Text = grData.CurrentRow.Cells[0].Value.ToString();
         }
 
         private void toolStripButton1_Click(object sender, EventArgs e)
@@ -72,12 +112,12 @@ namespace itInventor
 
             if (trPodr.SelectedNode == null) return;
 
-            fOborudAdd frm = new fOborudAdd(kod);
+            fOborudAdd frm = new fOborudAdd(kod); // открываем форму добавить оборудование
 
             frm.ShowDialog();
+
             if (frm.DialogResult == DialogResult.OK)
-            {
-                
+            {               
                 selOborudTableAdapter.Fill(selOborudDataSet.selOborud, kod);
             }
         }
@@ -159,10 +199,10 @@ namespace itInventor
             }
         }
 
-        private void trPodr_Click(object sender, EventArgs e)
-        {
+        //private void trPodr_Click(object sender, EventArgs e)
+        //{
            
-        }
+        //}
 
         private void toolStripButton2_Click(object sender, EventArgs e)
         {
@@ -189,20 +229,23 @@ namespace itInventor
             }
         }
 
-        private void toolStripButton4_Click(object sender, EventArgs e)
-        {
-            EditUser eUser = new EditUser(indPass, kod, model, parameters, serNum);
-            eUser.ShowDialog();
-        }
+        //private void toolStripButton4_Click(object sender, EventArgs e)
+        //{
+        //    EditUser eUser = new EditUser(indPass, kod, model, parameters, serNum);
+        //    eUser.ShowDialog();
 
-        private void grData_CellEnter(object sender, DataGridViewCellEventArgs e)
+        //    if (eUser.DialogResult == DialogResult.OK)
+        //    {
+        //        //trPodr_NodeMouseClick(sender, (TreeNodeMouseClickEventArgs)e);
+        //        //selOborudTableAdapter.Fill(selOborudDataSet.selOborud, kod);
+        //    }
+        //}
+
+        
+
+        private void grData_CellValueChanged(object sender, DataGridViewCellEventArgs e)
         {
-            // передаем только значения текстовых полей
-            indPass = (int)grData.CurrentRow.Cells[0].Value;      // получить значение 0 ячейки строки
-            //knName = grData.CurrentRow.Cells[1].Value.ToString(); // получить значение 1 ячейки строки
-            model = grData.CurrentRow.Cells[2].Value.ToString();
-            parameters = grData.CurrentRow.Cells[7].Value.ToString();
-            serNum = grData.CurrentRow.Cells[6].Value.ToString();
+            //grData.CurrentCell = grData[0, ind]; // установить курсор на редактируемую строку
         }
     }
 }
