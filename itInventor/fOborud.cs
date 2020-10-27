@@ -102,15 +102,21 @@ namespace itInventor
             serNum = grData.CurrentRow.Cells[6].Value.ToString();
 
             ind = (int)grData.CurrentRow.Index;  // получить индекс выбранной строки
-
-            if (grData.CurrentRow.Index != 0)          // если выбранная строка не равна по индексу 0
-            {                        
+            try
+            {
+                if (grData.CurrentRow.Index != 0)          // если выбранная строка не равна по индексу 0
+                {                        
                 grData.CurrentCell = grData[0, ind]; // установить курсор на редактируемую строку                     
-            }
+                }
 
-            if (grData.CurrentRow.Index == 0)
-            {                    
+                if (grData.CurrentRow.Index == 0)
+                {                    
                 grData.CurrentCell = grData[0, 0];
+                }
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
             }
 
             textBox1.Text = grData.CurrentRow.Index.ToString();
