@@ -117,7 +117,7 @@ namespace itInventor
             }
             catch(Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                //MessageBox.Show("Выберит строку нормально");
             }
 
             textBox1.Text = grData.CurrentRow.Index.ToString();
