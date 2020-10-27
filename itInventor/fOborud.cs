@@ -102,6 +102,7 @@ namespace itInventor
             serNum = grData.CurrentRow.Cells[6].Value.ToString();
 
             ind = (int)grData.CurrentRow.Index;  // получить индекс выбранной строки
+
             try
             {
                 if (grData.CurrentRow.Index != 0)          // если выбранная строка не равна по индексу 0
