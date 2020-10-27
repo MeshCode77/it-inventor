@@ -22,6 +22,13 @@ namespace itInventor
         int ind;
         int tempind;
         
+        public int Ind
+        { 
+            get
+            {
+                return ind;
+            }
+        }
 
 
 
@@ -71,39 +78,54 @@ namespace itInventor
         }
 
         private void toolStripButton4_Click(object sender, EventArgs e)
-        {
-            int temp = ind;
+        {            
             EditUser eUser = new EditUser(selOborudDataSet, indPass, kod, model, parameters, serNum);
             eUser.ShowDialog();
-           
+            
+            grData.CellEnter -= new System.Windows.Forms.DataGridViewCellEventHandler(grData_CellEnter); // отк событие
+
             selOborudTableAdapter.Fill(selOborudDataSet.selOborud, kod);
-                                             
-            grData.CurrentCell = grData[columnIndex: 0, rowIndex: temp]; // установить курсор на редактируемую строку
+              
+            grData.CurrentCell = grData[columnIndex: 0, rowIndex: ind]; // установить курсор на редактируемую строку
+           
+            grData.CellEnter += new System.Windows.Forms.DataGridViewCellEventHandler(grData_CellEnter); // вкл событие
         }
 
         private void grData_CellEnter(object sender, DataGridViewCellEventArgs e)
-        {
-            ind = (int)grData.CurrentRow.Index;  // получить индекс выбранной строки
+        {           
+            
             // передаем только значения текстовых полей
             indPass = (int)grData.CurrentRow.Cells[0].Value;      // получить значение 0 ячейки строки
             //knName = grData.CurrentRow.Cells[1].Value.ToString(); // получить значение 1 ячейки строки
             model = grData.CurrentRow.Cells[2].Value.ToString();
             parameters = grData.CurrentRow.Cells[7].Value.ToString();
-            serNum = grData.CurrentRow.Cells[6].Value.ToString();         
+            serNum = grData.CurrentRow.Cells[6].Value.ToString();
 
-            if(grData.CurrentRow.Index !=0)
-            {
-                ind = (int)grData.CurrentRow.Index;  // получить индекс выбранной строки                
+            ind = (int)grData.CurrentRow.Index;  // получить индекс выбранной строки
+
+            if (grData.CurrentRow.Index != 0)          // если выбранная строка не равна по индексу 0
+            {                        
                 grData.CurrentCell = grData[0, ind]; // установить курсор на редактируемую строку                     
             }
 
-            if(grData.CurrentRow.Index == 0)
-            {
+            if (grData.CurrentRow.Index == 0)
+            {                    
                 grData.CurrentCell = grData[0, 0];
             }
 
-            textBox1.Text = ind.ToString();
+            textBox1.Text = grData.CurrentRow.Index.ToString();
             textBox2.Text = grData.CurrentRow.Cells[0].Value.ToString();
+
+        }
+
+        private void grData_SelectionChanged(object sender, EventArgs e)
+        {
+            //if (grData.CurrentRow.Index != 0)
+            //{
+            //grData.CurrentCell = grData.Rows[ind].Cells[0];
+            //}
+
+            //grData.CurrentCell = grData[0, ind]; // установить курсор на редактируемую строку  
         }
 
         private void toolStripButton1_Click(object sender, EventArgs e)
@@ -136,8 +158,6 @@ namespace itInventor
                 rrem = false;
             else
                 rrem = (bool)grData.Rows[e.RowIndex].Cells["onRemont"].Value;
-
-
 
 
             if (rdism)
@@ -247,5 +267,7 @@ namespace itInventor
         {
             //grData.CurrentCell = grData[0, ind]; // установить курсор на редактируемую строку
         }
+
+        
     }
 }

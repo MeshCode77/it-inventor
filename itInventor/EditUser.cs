@@ -20,8 +20,8 @@ namespace itInventor
         string model;
         string parameters;
         string serNum;
-        //int ind;  
-        
+        //int ind;
+        DataSet selOb;
 
 
         public EditUser(DataSet selOb, int indPass, int kod, string model, string parameters, string serNum)
@@ -34,7 +34,7 @@ namespace itInventor
             this.serNum = serNum;
             //this.ind = ind;
 
-            //DataSet selOborudDataSet = selOb;
+            this.selOb = selOb;
 
             InitializeComponent();
         }
@@ -66,7 +66,8 @@ namespace itInventor
 
         private void button1_Click(object sender, EventArgs e)
         {
-            fOborud fOb = new fOborud();
+            fOborud fOb = new fOborud();           
+
             //objectsTableAdapter.Update(objectsDataSet);  
 
             try

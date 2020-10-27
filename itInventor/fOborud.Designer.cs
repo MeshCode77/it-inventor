@@ -29,13 +29,11 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(fOborud));
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.trPodr = new System.Windows.Forms.TreeView();
-            this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.grData = new System.Windows.Forms.DataGridView();
             this.objNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.prNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -75,8 +73,10 @@
             this.selOborudTableAdapter = new itInventor.selOborudDataSetTableAdapters.selOborudTableAdapter();
             this.objectsDataSet = new itInventor.objectsDataSet();
             this.objectsTableAdapter = new itInventor.objectsDataSetTableAdapters.objectsTableAdapter();
-            this.label2 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -110,8 +110,8 @@
             // splitContainer1.Panel2
             // 
             this.splitContainer1.Panel2.Controls.Add(this.label2);
-            this.splitContainer1.Panel2.Controls.Add(this.textBox2);
             this.splitContainer1.Panel2.Controls.Add(this.label1);
+            this.splitContainer1.Panel2.Controls.Add(this.textBox2);
             this.splitContainer1.Panel2.Controls.Add(this.textBox1);
             this.splitContainer1.Panel2.Controls.Add(this.grData);
             this.splitContainer1.Panel2.Controls.Add(this.bindingNavigator1);
@@ -129,22 +129,6 @@
             this.trPodr.Size = new System.Drawing.Size(232, 411);
             this.trPodr.TabIndex = 0;
             this.trPodr.NodeMouseClick += new System.Windows.Forms.TreeNodeMouseClickEventHandler(this.trPodr_NodeMouseClick);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(35, 329);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(66, 13);
-            this.label1.TabIndex = 3;
-            this.label1.Text = "Select Index";
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(108, 323);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 2;
             // 
             // grData
             // 
@@ -179,11 +163,12 @@
             this.grData.Location = new System.Drawing.Point(3, 28);
             this.grData.Name = "grData";
             this.grData.ReadOnly = true;
-            this.grData.Size = new System.Drawing.Size(573, 270);
+            this.grData.Size = new System.Drawing.Size(573, 288);
             this.grData.TabIndex = 1;
             this.grData.CellEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.grData_CellEnter);
             this.grData.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.grData_CellValueChanged);
             this.grData.RowPrePaint += new System.Windows.Forms.DataGridViewRowPrePaintEventHandler(this.dataGridView1_RowPrePaint);
+            this.grData.SelectionChanged += new System.EventHandler(this.grData_SelectionChanged);
             // 
             // objNo
             // 
@@ -209,9 +194,9 @@
             // costDataGridViewTextBoxColumn
             // 
             this.costDataGridViewTextBoxColumn.DataPropertyName = "cost";
-            dataGridViewCellStyle1.Format = "N2";
-            dataGridViewCellStyle1.NullValue = null;
-            this.costDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.Format = "N2";
+            dataGridViewCellStyle2.NullValue = null;
+            this.costDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle2;
             this.costDataGridViewTextBoxColumn.HeaderText = "Стоимость";
             this.costDataGridViewTextBoxColumn.Name = "costDataGridViewTextBoxColumn";
             this.costDataGridViewTextBoxColumn.ReadOnly = true;
@@ -488,21 +473,37 @@
             // 
             this.objectsTableAdapter.ClearBeforeFill = true;
             // 
-            // label2
+            // textBox1
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(17, 380);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(84, 13);
-            this.label2.TabIndex = 5;
-            this.label2.Text = "Value Column[0]";
+            this.textBox1.Location = new System.Drawing.Point(128, 338);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(100, 20);
+            this.textBox1.TabIndex = 2;
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(108, 373);
+            this.textBox2.Location = new System.Drawing.Point(128, 376);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(100, 20);
-            this.textBox2.TabIndex = 4;
+            this.textBox2.TabIndex = 3;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(36, 341);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(21, 13);
+            this.label1.TabIndex = 4;
+            this.label1.Text = "ind";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(27, 383);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(83, 13);
+            this.label2.TabIndex = 5;
+            this.label2.Text = "value Column[0]";
             // 
             // fOborud
             // 
@@ -575,9 +576,9 @@
         public System.Windows.Forms.DataGridView grData;
         private objectsDataSet objectsDataSet;
         private objectsDataSetTableAdapters.objectsTableAdapter objectsTableAdapter;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }
