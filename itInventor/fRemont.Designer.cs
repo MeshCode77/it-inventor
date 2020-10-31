@@ -69,6 +69,8 @@
             this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.grReady = new System.Windows.Forms.DataGridView();
+            this.objArhBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.objArchDataSet = new itInventor.objArchDataSet();
             this.bindingNavigator2 = new System.Windows.Forms.BindingNavigator(this.components);
             this.bindingNavigatorCountItem1 = new System.Windows.Forms.ToolStripLabel();
             this.bindingNavigatorMoveFirstItem1 = new System.Windows.Forms.ToolStripButton();
@@ -112,8 +114,6 @@
             this.spisanDataSet = new itInventor.SpisanDataSet();
             this.objOnRemontTableAdapter = new itInventor.objOnRemontDataSetTableAdapters.objOnRemontTableAdapter();
             this.objectsTableAdapter = new itInventor.SpisanDataSetTableAdapters.objectsTableAdapter();
-            this.objArhBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.objArchDataSet = new itInventor.objArchDataSet();
             this.objArhTableAdapter = new itInventor.objArchDataSetTableAdapters.objArhTableAdapter();
             this.remNoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.objNoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -136,6 +136,8 @@
             this.bindingNavigator1.SuspendLayout();
             this.tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grReady)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.objArhBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.objArchDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator2)).BeginInit();
             this.bindingNavigator2.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -144,8 +146,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgSpisan)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.objectsBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.spisanDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.objArhBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.objArchDataSet)).BeginInit();
             this.SuspendLayout();
             // 
             // statusStrip1
@@ -528,8 +528,19 @@
             this.grReady.Location = new System.Drawing.Point(6, 31);
             this.grReady.Name = "grReady";
             this.grReady.ReadOnly = true;
+            this.grReady.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.grReady.Size = new System.Drawing.Size(921, 350);
             this.grReady.TabIndex = 1;
+            // 
+            // objArhBindingSource
+            // 
+            this.objArhBindingSource.DataMember = "objArh";
+            this.objArhBindingSource.DataSource = this.objArchDataSet;
+            // 
+            // objArchDataSet
+            // 
+            this.objArchDataSet.DataSetName = "objArchDataSet";
+            this.objArchDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // bindingNavigator2
             // 
@@ -862,6 +873,7 @@
             this.dgSpisan.Location = new System.Drawing.Point(0, 31);
             this.dgSpisan.Name = "dgSpisan";
             this.dgSpisan.ReadOnly = true;
+            this.dgSpisan.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgSpisan.Size = new System.Drawing.Size(933, 356);
             this.dgSpisan.TabIndex = 0;
             // 
@@ -932,16 +944,6 @@
             // 
             this.objectsTableAdapter.ClearBeforeFill = true;
             // 
-            // objArhBindingSource
-            // 
-            this.objArhBindingSource.DataMember = "objArh";
-            this.objArhBindingSource.DataSource = this.objArchDataSet;
-            // 
-            // objArchDataSet
-            // 
-            this.objArchDataSet.DataSetName = "objArchDataSet";
-            this.objArchDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
             // objArhTableAdapter
             // 
             this.objArhTableAdapter.ClearBeforeFill = true;
@@ -949,17 +951,17 @@
             // remNoDataGridViewTextBoxColumn
             // 
             this.remNoDataGridViewTextBoxColumn.DataPropertyName = "remNo";
-            this.remNoDataGridViewTextBoxColumn.HeaderText = "№ п/п";
+            this.remNoDataGridViewTextBoxColumn.HeaderText = "remNo";
             this.remNoDataGridViewTextBoxColumn.Name = "remNoDataGridViewTextBoxColumn";
             this.remNoDataGridViewTextBoxColumn.ReadOnly = true;
+            this.remNoDataGridViewTextBoxColumn.Visible = false;
             // 
             // objNoDataGridViewTextBoxColumn
             // 
             this.objNoDataGridViewTextBoxColumn.DataPropertyName = "objNo";
-            this.objNoDataGridViewTextBoxColumn.HeaderText = "objNo";
+            this.objNoDataGridViewTextBoxColumn.HeaderText = "Инв №";
             this.objNoDataGridViewTextBoxColumn.Name = "objNoDataGridViewTextBoxColumn";
             this.objNoDataGridViewTextBoxColumn.ReadOnly = true;
-            this.objNoDataGridViewTextBoxColumn.Visible = false;
             // 
             // modelDataGridViewTextBoxColumn1
             // 
@@ -1056,6 +1058,8 @@
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grReady)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.objArhBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.objArchDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator2)).EndInit();
             this.bindingNavigator2.ResumeLayout(false);
             this.bindingNavigator2.PerformLayout();
@@ -1067,8 +1071,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgSpisan)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.objectsBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.spisanDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.objArhBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.objArchDataSet)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

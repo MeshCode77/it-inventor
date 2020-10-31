@@ -21,9 +21,7 @@ namespace itInventor
             InitializeComponent();
 
             grRemont.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-            grRemont.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-
-
+            grRemont.SelectionMode = DataGridViewSelectionMode.FullRowSelect;         
            
         }
 
@@ -40,8 +38,10 @@ namespace itInventor
 
             aMonth = DateTime.Now.Month;
             aYear = DateTime.Now.Year;
-
+           
             this.objArhTableAdapter.Fill(objArchDataSet.objArh, aMonth, aYear);
+
+            grReady.Columns[0].Visible = false;
 
         }
 
@@ -93,21 +93,30 @@ namespace itInventor
 
         private void toolStripButton3_Click(object sender, EventArgs e) // Отремонтировано
         {
-            SqlCommand cmd = new SqlCommand
+
+            try
             {
-                Connection = new SqlConnection(Properties.Settings.Default.itInventorConnectionString),
-                CommandText = "objArh",
-                CommandType = CommandType.StoredProcedure
-            };
+                SqlCommand cmd = new SqlCommand
+                {
+                    Connection = new SqlConnection(Properties.Settings.Default.itInventorConnectionString),
+                    CommandText = "objArh",
+                    CommandType = CommandType.StoredProcedure
+                };
 
-            cmd.Parameters.AddWithValue("@aMonth", aMonth);
-            cmd.Parameters.AddWithValue("@aYear", aYear);           
+                cmd.Parameters.AddWithValue("@aMonth", aMonth);
+                cmd.Parameters.AddWithValue("@aYear", aYear);
 
-            cmd.Connection.Open();
-            cmd.ExecuteNonQuery();
-            cmd.Connection.Close();
+                cmd.Connection.Open();
+                cmd.ExecuteNonQuery();
+                cmd.Connection.Close();
 
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);               
+            }
             
+
         }
     }
 }

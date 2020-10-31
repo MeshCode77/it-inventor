@@ -211,12 +211,7 @@ namespace itInventor
                 int kod = (int)trPodr.SelectedNode.Tag;
                 selOborudTableAdapter.Fill(selOborudDataSet.selOborud, kod);
             }
-        }
-
-        //private void trPodr_Click(object sender, EventArgs e)
-        //{
-           
-        //}
+        }     
 
         private void toolStripButton2_Click(object sender, EventArgs e)
         {
@@ -241,27 +236,6 @@ namespace itInventor
                 int kod = (int)trPodr.SelectedNode.Tag;
                 selOborudTableAdapter.Fill(selOborudDataSet.selOborud, kod);
             }
-        }
-
-        //private void toolStripButton4_Click(object sender, EventArgs e)
-        //{
-        //    EditUser eUser = new EditUser(indPass, kod, model, parameters, serNum);
-        //    eUser.ShowDialog();
-
-        //    if (eUser.DialogResult == DialogResult.OK)
-        //    {
-        //        //trPodr_NodeMouseClick(sender, (TreeNodeMouseClickEventArgs)e);
-        //        //selOborudTableAdapter.Fill(selOborudDataSet.selOborud, kod);
-        //    }
-        //}
-
-        
-
-        private void grData_CellValueChanged(object sender, DataGridViewCellEventArgs e)
-        {
-            //grData.CurrentCell = grData[0, ind]; // установить курсор на редактируемую строку
-        }
-
-        
+        }                    
     }
 }

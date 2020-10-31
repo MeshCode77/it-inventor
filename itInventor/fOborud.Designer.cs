@@ -197,8 +197,7 @@
             this.grData.ReadOnly = true;
             this.grData.Size = new System.Drawing.Size(573, 288);
             this.grData.TabIndex = 1;
-            this.grData.CellEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.grData_CellEnter);
-            this.grData.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.grData_CellValueChanged);
+            this.grData.CellEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.grData_CellEnter);           
             this.grData.RowPrePaint += new System.Windows.Forms.DataGridViewRowPrePaintEventHandler(this.dataGridView1_RowPrePaint);
             this.grData.SelectionChanged += new System.EventHandler(this.grData_SelectionChanged);
             // 
