@@ -1,0 +1,94 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="SpisanDataSet" targetNamespace="http://tempuri.org/SpisanDataSet.xsd" xmlns:mstns="http://tempuri.org/SpisanDataSet.xsd" xmlns="http://tempuri.org/SpisanDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="itInventorConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="itInventorConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.itInventor.Properties.Settings.GlobalReference.Default.itInventorConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="objectsTableAdapter" GeneratorDataComponentClassName="objectsTableAdapter" Name="objects" UserDataComponentName="objectsTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="itInventorConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        objects.objNo, objects.objNote, objects.objDate, objects.model, objects.sNo, users.usFio, kind.knName
+FROM            objects INNER JOIN
+                         users ON objects.id_us = users.id_us INNER JOIN
+                         kind ON objects.id_kn = kind.id_kn
+WHERE        (objects.objDism = 1)</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="objNo" DataSetColumn="objNo" />
+              <Mapping SourceColumn="objNote" DataSetColumn="objNote" />
+              <Mapping SourceColumn="objDate" DataSetColumn="objDate" />
+              <Mapping SourceColumn="model" DataSetColumn="model" />
+              <Mapping SourceColumn="sNo" DataSetColumn="sNo" />
+              <Mapping SourceColumn="usFio" DataSetColumn="usFio" />
+              <Mapping SourceColumn="knName" DataSetColumn="knName" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="SpisanDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="SpisanDataSet" msprop:Generator_UserDSName="SpisanDataSet">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="objects" msprop:Generator_TableClassName="objectsDataTable" msprop:Generator_TableVarName="tableobjects" msprop:Generator_TablePropName="objects" msprop:Generator_RowDeletingName="objectsRowDeleting" msprop:Generator_RowChangingName="objectsRowChanging" msprop:Generator_RowEvHandlerName="objectsRowChangeEventHandler" msprop:Generator_RowDeletedName="objectsRowDeleted" msprop:Generator_UserTableName="objects" msprop:Generator_RowChangedName="objectsRowChanged" msprop:Generator_RowEvArgName="objectsRowChangeEvent" msprop:Generator_RowClassName="objectsRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="objNo" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnobjNo" msprop:Generator_ColumnPropNameInRow="objNo" msprop:Generator_ColumnPropNameInTable="objNoColumn" msprop:Generator_UserColumnName="objNo" type="xs:int" />
+              <xs:element name="objNote" msprop:Generator_ColumnVarNameInTable="columnobjNote" msprop:Generator_ColumnPropNameInRow="objNote" msprop:Generator_ColumnPropNameInTable="objNoteColumn" msprop:Generator_UserColumnName="objNote" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1073741823" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="objDate" msprop:Generator_ColumnVarNameInTable="columnobjDate" msprop:Generator_ColumnPropNameInRow="objDate" msprop:Generator_ColumnPropNameInTable="objDateColumn" msprop:Generator_UserColumnName="objDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="model" msprop:Generator_ColumnVarNameInTable="columnmodel" msprop:Generator_ColumnPropNameInRow="model" msprop:Generator_ColumnPropNameInTable="modelColumn" msprop:Generator_UserColumnName="model" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="sNo" msprop:Generator_ColumnVarNameInTable="columnsNo" msprop:Generator_ColumnPropNameInRow="sNo" msprop:Generator_ColumnPropNameInTable="sNoColumn" msprop:Generator_UserColumnName="sNo" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="usFio" msprop:Generator_ColumnVarNameInTable="columnusFio" msprop:Generator_ColumnPropNameInRow="usFio" msprop:Generator_ColumnPropNameInTable="usFioColumn" msprop:Generator_UserColumnName="usFio" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="knName" msprop:Generator_ColumnVarNameInTable="columnknName" msprop:Generator_ColumnPropNameInRow="knName" msprop:Generator_ColumnPropNameInTable="knNameColumn" msprop:Generator_UserColumnName="knName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:objects" />
+      <xs:field xpath="mstns:objNo" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>
