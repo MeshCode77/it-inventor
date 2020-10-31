@@ -89,8 +89,8 @@
             // 
             this.mRemont.Name = "mRemont";
             this.mRemont.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.R)));
-            this.mRemont.Size = new System.Drawing.Size(249, 22);
-            this.mRemont.Text = "Ремонт / Профилактика";
+            this.mRemont.Size = new System.Drawing.Size(221, 22);
+            this.mRemont.Text = "Ремонт / Списание";
             this.mRemont.Click += new System.EventHandler(this.mRemont_Click);
             // 
             // toolStripMenuItem3
@@ -183,7 +183,9 @@
             this.IsMdiContainer = true;
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "fMainForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "IT - Инвентор";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);

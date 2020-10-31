@@ -9,7 +9,7 @@
         <Tables>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="objArhTableAdapter" GeneratorDataComponentClassName="objArhTableAdapter" Name="objArh" UserDataComponentName="objArhTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="itInventorConnectionString (Settings)" DbObjectName="itInventor.dbo.objArh" DbObjectType="StoredProcedure" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="itInventorConnectionString (Settings)" DbObjectName="itInventor.dbo.objArh" DbObjectType="StoredProcedure" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
                 <SelectCommand>
                   <DbCommand CommandType="StoredProcedure" ModifiedByUser="false">
                     <CommandText>dbo.objArh</CommandText>
@@ -46,7 +46,7 @@
   <xs:element name="objArchDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="objArchDataSet" msprop:Generator_UserDSName="objArchDataSet">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="objArh" msprop:Generator_TableClassName="objArhDataTable" msprop:Generator_TableVarName="tableobjArh" msprop:Generator_TablePropName="objArh" msprop:Generator_RowDeletingName="objArhRowDeleting" msprop:Generator_RowChangingName="objArhRowChanging" msprop:Generator_RowEvHandlerName="objArhRowChangeEventHandler" msprop:Generator_RowDeletedName="objArhRowDeleted" msprop:Generator_UserTableName="objArh" msprop:Generator_RowChangedName="objArhRowChanged" msprop:Generator_RowEvArgName="objArhRowChangeEvent" msprop:Generator_RowClassName="objArhRow">
+        <xs:element name="objArh" msprop:Generator_TableClassName="objArhDataTable" msprop:Generator_TableVarName="tableobjArh" msprop:Generator_RowChangedName="objArhRowChanged" msprop:Generator_TablePropName="objArh" msprop:Generator_RowDeletingName="objArhRowDeleting" msprop:Generator_RowChangingName="objArhRowChanging" msprop:Generator_RowEvHandlerName="objArhRowChangeEventHandler" msprop:Generator_RowDeletedName="objArhRowDeleted" msprop:Generator_RowClassName="objArhRow" msprop:Generator_UserTableName="objArh" msprop:Generator_RowEvArgName="objArhRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="remNo" msdata:ReadOnly="true" msdata:AutoIncrement="true" msprop:Generator_ColumnVarNameInTable="columnremNo" msprop:Generator_ColumnPropNameInRow="remNo" msprop:Generator_ColumnPropNameInTable="remNoColumn" msprop:Generator_UserColumnName="remNo" type="xs:int" />

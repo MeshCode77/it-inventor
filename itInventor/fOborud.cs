@@ -20,17 +20,7 @@ namespace itInventor
         string parameters;
         string serNum;
         int ind;
-        int tempind;
-        
-        public int Ind
-        { 
-            get
-            {
-                return ind;
-            }
-        }
-
-
+        int tempind;          
 
         public fOborud()
         {
@@ -74,6 +64,8 @@ namespace itInventor
         {
             kod = (int)e.Node.Tag; // выбираем код подразделения
 
+            this.WindowState = FormWindowState.Maximized;
+
             selOborudTableAdapter.Fill(selOborudDataSet.selOborud, kod); // заполняем таблицу данными согласно выбранного кода подразделения
         }
 
@@ -107,15 +99,15 @@ namespace itInventor
             {
                 if (grData.CurrentRow.Index != 0)          // если выбранная строка не равна по индексу 0
                 {                        
-                grData.CurrentCell = grData[0, ind]; // установить курсор на редактируемую строку                     
+                    grData.CurrentCell = grData[0, ind]; // установить курсор на редактируемую строку                     
                 }
 
                 if (grData.CurrentRow.Index == 0)
                 {                    
-                grData.CurrentCell = grData[0, 0];
+                    grData.CurrentCell = grData[0, 0];
                 }
             }
-            catch(Exception ex)
+            catch(Exception)
             {
                 //MessageBox.Show("Выберит строку нормально");
             }
@@ -127,12 +119,7 @@ namespace itInventor
 
         private void grData_SelectionChanged(object sender, EventArgs e)
         {
-            //if (grData.CurrentRow.Index != 0)
-            //{
-            //grData.CurrentCell = grData.Rows[ind].Cells[0];
-            //}
-
-            //grData.CurrentCell = grData[0, ind]; // установить курсор на редактируемую строку  
+            
         }
 
         private void toolStripButton1_Click(object sender, EventArgs e)

@@ -16,6 +16,8 @@ namespace itInventor
         public fMainForm()
         {
             InitializeComponent();
+
+
         }
 
         private void mExit_Click(object sender, EventArgs e)

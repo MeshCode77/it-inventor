@@ -48,10 +48,7 @@ namespace itInventor
             // TODO: данная строка кода позволяет загрузить данные в таблицу "prodDataSet.producer". При необходимости она может быть перемещена или удалена.
             this.producerTableAdapter.Fill(this.prodDataSet.producer);
             // TODO: данная строка кода позволяет загрузить данные в таблицу "kindDataSet.kind". При необходимости она может быть перемещена или удалена.
-            this.kindTableAdapter.Fill(this.kindDataSet.kind);
-
-            textBox1.Text = indPass.ToString();
-            //cbKind.Text = knName;
+            this.kindTableAdapter.Fill(this.kindDataSet.kind);                    
 
             //txModel.Text = objectsTableAdapter.Fill(editObject.objects.modelColumn.Table, indPass);
             txModel.Text = model;
@@ -66,9 +63,7 @@ namespace itInventor
 
         private void button1_Click(object sender, EventArgs e)
         {
-            fOborud fOb = new fOborud();           
-
-            //objectsTableAdapter.Update(objectsDataSet);  
+            fOborud fOb = new fOborud();                     
 
             try
             {
@@ -92,21 +87,14 @@ namespace itInventor
                 cmd.Parameters.AddWithValue("@id_ps", cbPost.SelectedValue);
                 cmd.Parameters.AddWithValue("@id_pr", cbProd.SelectedValue);
 
+                cmd.Parameters.AddWithValue("@objDism", chBox_Spisan.Checked);
+                cmd.Parameters.AddWithValue("@onRemont", cheBox_Remont.Checked);
+
                 cmd.Connection.Open();
                 cmd.ExecuteNonQuery();                
-                cmd.Connection.Close();
-
-                //objectsTableAdapter.Fill(objectsDataSet.objects);
-                
-
-                //fOb.grData.DataSource = selOborudBindingSource;
-                //SelObjects();
-                //fOb.fOborud_Load(sender, e);
-                //selOborudTableAdapter.Fill(selOborudDataSet.selOborud, kod);
+                cmd.Connection.Close();               
 
                 MessageBox.Show("Успешно обновлено");
-
-                
 
             }
             catch (Exception ex)
@@ -114,23 +102,6 @@ namespace itInventor
                 MessageBox.Show(ex.Message);
             }
             Close();
-        }
-
-        public void SelObjects()
-        {
-            SqlCommand cmd = new SqlCommand
-            {
-                Connection = new SqlConnection(Properties.Settings.Default.itInventorConnectionString),
-                CommandText = "selOborud",
-                CommandType = CommandType.StoredProcedure
-            };
-
-            cmd.Parameters.AddWithValue("@kod", kod);
-
-            cmd.Connection.Open();
-            cmd.ExecuteNonQuery();
-            cmd.Connection.Close();
-        }
-
+        }       
     }
 }

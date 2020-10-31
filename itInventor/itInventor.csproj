@@ -172,6 +172,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>SortPoPodrDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="SpisanDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SpisanDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="usersDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -349,6 +354,17 @@
     </None>
     <None Include="SortPoPodrDataSet.xss">
       <DependentUpon>SortPoPodrDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="SpisanDataSet.xsc">
+      <DependentUpon>SpisanDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="SpisanDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SpisanDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="SpisanDataSet.xss">
+      <DependentUpon>SpisanDataSet.xsd</DependentUpon>
     </None>
     <None Include="usersDataSet.xsc">
       <DependentUpon>usersDataSet.xsd</DependentUpon>

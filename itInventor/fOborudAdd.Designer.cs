@@ -30,6 +30,8 @@
         {
             this.components = new System.ComponentModel.Container();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.cheBox_Remont = new System.Windows.Forms.CheckBox();
+            this.chBox_Spisan = new System.Windows.Forms.CheckBox();
             this.cbUser = new System.Windows.Forms.ComboBox();
             this.usersBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.sortPoPodrDataSet = new itInventor.SortPoPodrDataSet();
@@ -81,6 +83,8 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.cheBox_Remont);
+            this.groupBox1.Controls.Add(this.chBox_Spisan);
             this.groupBox1.Controls.Add(this.cbUser);
             this.groupBox1.Controls.Add(this.txSNo);
             this.groupBox1.Controls.Add(this.txParam);
@@ -106,6 +110,26 @@
             this.groupBox1.Size = new System.Drawing.Size(480, 281);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
+            // 
+            // cheBox_Remont
+            // 
+            this.cheBox_Remont.AutoSize = true;
+            this.cheBox_Remont.Location = new System.Drawing.Point(390, 65);
+            this.cheBox_Remont.Name = "cheBox_Remont";
+            this.cheBox_Remont.Size = new System.Drawing.Size(79, 17);
+            this.cheBox_Remont.TabIndex = 27;
+            this.cheBox_Remont.Text = "В ремонте";
+            this.cheBox_Remont.UseVisualStyleBackColor = true;
+            // 
+            // chBox_Spisan
+            // 
+            this.chBox_Spisan.AutoSize = true;
+            this.chBox_Spisan.Location = new System.Drawing.Point(390, 15);
+            this.chBox_Spisan.Name = "chBox_Spisan";
+            this.chBox_Spisan.Size = new System.Drawing.Size(63, 17);
+            this.chBox_Spisan.TabIndex = 26;
+            this.chBox_Spisan.Text = "Списан";
+            this.chBox_Spisan.UseVisualStyleBackColor = true;
             // 
             // cbUser
             // 
@@ -294,9 +318,9 @@
             this.label6.AutoSize = true;
             this.label6.Location = new System.Drawing.Point(11, 152);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(54, 13);
+            this.label6.Size = new System.Drawing.Size(56, 13);
             this.label6.TabIndex = 5;
-            this.label6.Text = "Гарантия";
+            this.label6.Text = "Списание";
             // 
             // label5
             // 
@@ -456,5 +480,7 @@
         private System.Windows.Forms.BindingSource usersBindingSource;
         private SortPoPodrDataSet sortPoPodrDataSet;
         private SortPoPodrDataSetTableAdapters.usersTableAdapter usersTableAdapter;
+        private System.Windows.Forms.CheckBox cheBox_Remont;
+        private System.Windows.Forms.CheckBox chBox_Spisan;
     }
 }

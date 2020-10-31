@@ -30,12 +30,8 @@
         {
             this.components = new System.ComponentModel.Container();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.button2 = new System.Windows.Forms.Button();
-            this.label12 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.label11 = new System.Windows.Forms.Label();
-            this.OK = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.cheBox_Remont = new System.Windows.Forms.CheckBox();
+            this.chBox_Spisan = new System.Windows.Forms.CheckBox();
             this.cbUser = new System.Windows.Forms.ComboBox();
             this.usersBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.sortPoPodrDataSet = new itInventor.SortPoPodrDataSet();
@@ -65,6 +61,8 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.button2 = new System.Windows.Forms.Button();
+            this.OK = new System.Windows.Forms.Button();
             this.kindTableAdapter = new itInventor.kindDataSetTableAdapters.kindTableAdapter();
             this.producerTableAdapter = new itInventor.prodDataSetTableAdapters.producerTableAdapter();
             this.postBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -94,12 +92,8 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.button2);
-            this.groupBox1.Controls.Add(this.label12);
-            this.groupBox1.Controls.Add(this.textBox2);
-            this.groupBox1.Controls.Add(this.label11);
-            this.groupBox1.Controls.Add(this.OK);
-            this.groupBox1.Controls.Add(this.textBox1);
+            this.groupBox1.Controls.Add(this.cheBox_Remont);
+            this.groupBox1.Controls.Add(this.chBox_Spisan);
             this.groupBox1.Controls.Add(this.cbUser);
             this.groupBox1.Controls.Add(this.txSNo);
             this.groupBox1.Controls.Add(this.txParam);
@@ -122,62 +116,29 @@
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Location = new System.Drawing.Point(12, 12);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(584, 281);
+            this.groupBox1.Size = new System.Drawing.Size(484, 281);
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             // 
-            // button2
+            // cheBox_Remont
             // 
-            this.button2.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.button2.Location = new System.Drawing.Point(496, 252);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(82, 23);
-            this.button2.TabIndex = 3;
-            this.button2.Text = "Отмена";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.cheBox_Remont.AutoSize = true;
+            this.cheBox_Remont.Location = new System.Drawing.Point(397, 69);
+            this.cheBox_Remont.Name = "cheBox_Remont";
+            this.cheBox_Remont.Size = new System.Drawing.Size(79, 17);
+            this.cheBox_Remont.TabIndex = 25;
+            this.cheBox_Remont.Text = "В ремонте";
+            this.cheBox_Remont.UseVisualStyleBackColor = true;
             // 
-            // label12
+            // chBox_Spisan
             // 
-            this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(317, 59);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(42, 13);
-            this.label12.TabIndex = 23;
-            this.label12.Text = "id_podr";
-            // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(365, 52);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(64, 20);
-            this.textBox2.TabIndex = 22;
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(344, 16);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(15, 13);
-            this.label11.TabIndex = 21;
-            this.label11.Text = "id";
-            // 
-            // OK
-            // 
-            this.OK.Location = new System.Drawing.Point(496, 217);
-            this.OK.Name = "OK";
-            this.OK.Size = new System.Drawing.Size(82, 23);
-            this.OK.TabIndex = 2;
-            this.OK.Text = "OK";
-            this.OK.UseVisualStyleBackColor = true;
-            this.OK.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(365, 14);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(64, 20);
-            this.textBox1.TabIndex = 20;
+            this.chBox_Spisan.AutoSize = true;
+            this.chBox_Spisan.Location = new System.Drawing.Point(397, 19);
+            this.chBox_Spisan.Name = "chBox_Spisan";
+            this.chBox_Spisan.Size = new System.Drawing.Size(63, 17);
+            this.chBox_Spisan.TabIndex = 24;
+            this.chBox_Spisan.Text = "Списан";
+            this.chBox_Spisan.UseVisualStyleBackColor = true;
             // 
             // cbUser
             // 
@@ -371,9 +332,9 @@
             this.label6.AutoSize = true;
             this.label6.Location = new System.Drawing.Point(11, 152);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(54, 13);
+            this.label6.Size = new System.Drawing.Size(56, 13);
             this.label6.TabIndex = 5;
-            this.label6.Text = "Гарантия";
+            this.label6.Text = "Списание";
             // 
             // label5
             // 
@@ -419,6 +380,27 @@
             this.label1.Size = new System.Drawing.Size(26, 13);
             this.label1.TabIndex = 0;
             this.label1.Text = "Вид";
+            // 
+            // button2
+            // 
+            this.button2.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.button2.Location = new System.Drawing.Point(502, 270);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(82, 23);
+            this.button2.TabIndex = 3;
+            this.button2.Text = "Отмена";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // OK
+            // 
+            this.OK.Location = new System.Drawing.Point(502, 236);
+            this.OK.Name = "OK";
+            this.OK.Size = new System.Drawing.Size(82, 23);
+            this.OK.TabIndex = 2;
+            this.OK.Text = "Update";
+            this.OK.UseVisualStyleBackColor = true;
+            this.OK.Click += new System.EventHandler(this.button1_Click);
             // 
             // kindTableAdapter
             // 
@@ -468,8 +450,10 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(608, 305);
+            this.ClientSize = new System.Drawing.Size(589, 305);
             this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.OK);
+            this.Controls.Add(this.button2);
             this.Name = "EditUser";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "EditUser";
@@ -517,8 +501,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.BindingSource kindDataSetBindingSource;
         private kindDataSet kindDataSet;
         private System.Windows.Forms.BindingSource kindBindingSource;
@@ -535,12 +517,12 @@
         private SortPoPodrDataSetTableAdapters.usersTableAdapter usersTableAdapter;
         private System.Windows.Forms.Button OK;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.TextBox textBox2;
         private objectsDataSetTableAdapters.objectsTableAdapter objectsTableAdapter;
         private objectsDataSet objectsDataSet;
         private selOborudDataSet selOborudDataSet;
         private selOborudDataSetTableAdapters.selOborudTableAdapter selOborudTableAdapter;
         private System.Windows.Forms.BindingSource selOborudBindingSource;
+        private System.Windows.Forms.CheckBox cheBox_Remont;
+        private System.Windows.Forms.CheckBox chBox_Spisan;
     }
 }

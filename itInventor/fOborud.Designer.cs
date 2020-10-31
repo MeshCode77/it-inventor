@@ -29,11 +29,15 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(fOborud));
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.trPodr = new System.Windows.Forms.TreeView();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.grData = new System.Windows.Forms.DataGridView();
             this.objNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.prNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -73,10 +77,6 @@
             this.selOborudTableAdapter = new itInventor.selOborudDataSetTableAdapters.selOborudTableAdapter();
             this.objectsDataSet = new itInventor.objectsDataSet();
             this.objectsTableAdapter = new itInventor.objectsDataSetTableAdapters.objectsTableAdapter();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -129,6 +129,38 @@
             this.trPodr.Size = new System.Drawing.Size(232, 411);
             this.trPodr.TabIndex = 0;
             this.trPodr.NodeMouseClick += new System.Windows.Forms.TreeNodeMouseClickEventHandler(this.trPodr_NodeMouseClick);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(27, 383);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(83, 13);
+            this.label2.TabIndex = 5;
+            this.label2.Text = "value Column[0]";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(36, 341);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(21, 13);
+            this.label1.TabIndex = 4;
+            this.label1.Text = "ind";
+            // 
+            // textBox2
+            // 
+            this.textBox2.Location = new System.Drawing.Point(128, 376);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(100, 20);
+            this.textBox2.TabIndex = 3;
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(128, 338);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(100, 20);
+            this.textBox1.TabIndex = 2;
             // 
             // grData
             // 
@@ -194,9 +226,9 @@
             // costDataGridViewTextBoxColumn
             // 
             this.costDataGridViewTextBoxColumn.DataPropertyName = "cost";
-            dataGridViewCellStyle2.Format = "N2";
-            dataGridViewCellStyle2.NullValue = null;
-            this.costDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle1.Format = "N2";
+            dataGridViewCellStyle1.NullValue = null;
+            this.costDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle1;
             this.costDataGridViewTextBoxColumn.HeaderText = "Стоимость";
             this.costDataGridViewTextBoxColumn.Name = "costDataGridViewTextBoxColumn";
             this.costDataGridViewTextBoxColumn.ReadOnly = true;
@@ -472,38 +504,6 @@
             // objectsTableAdapter
             // 
             this.objectsTableAdapter.ClearBeforeFill = true;
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(128, 338);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 2;
-            // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(128, 376);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 20);
-            this.textBox2.TabIndex = 3;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(36, 341);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(21, 13);
-            this.label1.TabIndex = 4;
-            this.label1.Text = "ind";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(27, 383);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(83, 13);
-            this.label2.TabIndex = 5;
-            this.label2.Text = "value Column[0]";
             // 
             // fOborud
             // 
